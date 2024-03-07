@@ -12,6 +12,9 @@ export default function Header() {
             <li>
               <Link to="/product-list">Product List</Link>
             </li>
+            <li>
+              <Link to="/password-generator">Password Generator</Link>
+            </li>
           </ul>
         </nav>
       </div>
