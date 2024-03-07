@@ -1,0 +1,37 @@
+
+img {
+    object-fit:cover;
+    width: 100%;
+   
+}
+
+.category,
+.author {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.content,
+.role {
+    font-size: 12px;
+    color: gray;
+}
+
+.author-img-container {
+    overflow: hidden;
+
+    --author-image:30px;
+
+    width: var(--author-image);
+    height: var(--author-image);
+}
+
+.author-img-container img {
+    width: var(--author-image);
+    height: var(--author-image);
+    object-fit: cover;
+}

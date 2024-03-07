@@ -1,0 +1,19 @@
+input:focus {
+    outline: none;
+}
+
+i.bi-search {
+    color: gray;
+}
+
+head {
+    position: fixed;
+}
+
+.bi-list {
+    font-size: 30px;
+}
+
+.head h1 {
+    font-size: 20px;
+}
