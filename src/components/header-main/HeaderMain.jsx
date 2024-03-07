@@ -1,11 +1,11 @@
-
+import './header-main.css'
 import { Link } from "react-router-dom"
 export default function Header() {
   return (
     <header>
       <div className="py-3 px-5 d-flex align-items-center border-bottom justify-content-between">
         <nav>
-          <ul className=" d-flex ">
+          <ul className=" d-flex gap-3">
             <li>
               <Link to="/blog">Blog</Link>
             </li>

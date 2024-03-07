@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Button from '../components/button/Button';
 import './product-list.css'
+import Footer from '../components/footer/Footer';
 
 function App() {
 
@@ -33,13 +34,13 @@ function App() {
     const localData = localStorage.getItem('products');
 
     if (localData) {
-      
+
       let convertedData = JSON.parse(localData);
       convertedData.push(data);
       convertedData = JSON.stringify(convertedData);
       localStorage.setItem('products', convertedData);
     } else {
-      
+
       localStorage.setItem('products', JSON.stringify([data]));
     }
 
@@ -47,11 +48,12 @@ function App() {
   }
 
   const handleClick = (index) => {
+    console.log(true)
     const localData = localStorage.getItem('products');
     let convertedData = JSON.parse(localData);
     convertedData.splice(index, 1)
     convertedData = JSON.stringify(convertedData)
-    localStorage.setItem('produts', convertedData)
+    localStorage.setItem('products', convertedData)
     setLoading(!loading)
   }
 
@@ -66,10 +68,17 @@ function App() {
               <th>Photo</th>
               <th>Price</th>
               <th>Quantity</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
-            {products.length === 0 && <tr><td>No Data</td></tr>}
+            {products.length === 0 && <tr>
+              <td></td>
+              <td></td>
+              <td>No Data</td>
+              <td></td>
+              <td></td>
+              </tr>}
             {products.map((data, index) =>
               <tr key={index}>
                 <td>{data.title}</td>
@@ -122,6 +131,7 @@ function App() {
           <button className="btn btn-primary">Pridėti</button>
         </form>
       </div>
+      <Footer />
     </>
   );
 }
