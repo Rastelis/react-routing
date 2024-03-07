@@ -15,6 +15,9 @@ export default function Header() {
             <li>
               <Link to="/password-generator">Password Generator</Link>
             </li>
+            <li>
+              <Link to="/calculator">Calculator</Link>
+            </li>
           </ul>
         </nav>
       </div>

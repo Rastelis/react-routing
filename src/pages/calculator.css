@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@700&display=swap');
+
+.calculator {
+    font-family: "Kode Mono", monospace;
+    font-size: 40px;
+}
+
+.calculator-wraper button {
+    /* font-size: 20px; */
+    --bs-btn-font-size: 40px !important;
+    --bs-btn-line-height: 35px!important;
+}
+
+.calculator {
+    background-color: gray;
+
+}
+
+
+.display-container {
+    display: block;
+    background-color: orangered;
+}
+
+.button-wraper {
+    --bs-body-line-height: 35px!important;
+    height: auto;
+    width: auto;
+
+}
+
+.calculator-wraper {
+    height: 100vh;
+}
+
+
