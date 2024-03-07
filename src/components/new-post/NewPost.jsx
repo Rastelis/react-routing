@@ -12,15 +12,15 @@ export default function NewPost({ setReload }) {
             data[key] = value;
         }
 
-        const localData = localStorage.getItem('data');
+        const localData = localStorage.getItem('posts');
 
         if (localData) {
             let convertedData = JSON.parse(localData);
             convertedData.push(data);
-            localStorage.setItem('data', JSON.stringify(convertedData));
+            localStorage.setItem('posts', JSON.stringify(convertedData));
         }
         else {
-            localStorage.setItem('data', JSON.stringify([data]))
+            localStorage.setItem('posts', JSON.stringify([data]))
         }
         setReload((prev) => !prev);
     }

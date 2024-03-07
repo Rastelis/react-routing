@@ -5,7 +5,7 @@ export default function Posts({ reload }) {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        let data = localStorage.getItem("data");
+        let data = localStorage.getItem("posts");
         if (!data) return;
         setData(JSON.parse(data))
     }, [reload])
